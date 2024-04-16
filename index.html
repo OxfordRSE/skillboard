@@ -74,6 +74,9 @@
       border: 1px solid violet;
       box-shadow: violet 0px 0px 5px;
     }
+    .highlight::before {
+        content: "✓ ";
+      }
     span.wanted {
       background-color: white;
     }
@@ -106,9 +109,9 @@
         color: white;
       }
       a.highlight,
-      span.highlight,
-      span.highlightwanted {
-        background-color: blueviolet;
+      span.highlight {
+        border: 1px solid #5d465d;
+        box-shadow: #5d465d 0px 0px 5px;
       }
     }
   </style>
@@ -204,10 +207,10 @@
 
   const skillHTML = () => {
     const html = allSkills
-            .map(
-                    (s) =>
-                            `<li><a id="${s}" class="skill" onClick="skillOnClick('${s}')">${s}</a></li>`
-            )
+            .map((s) => {
+              const highlight = selectedSkills.has(s) ? "highlight" : "";
+              return `<li><a id="${s}" class="skill ${highlight}" onClick="skillOnClick('${s}')">${s}</a></li>`;
+            })
             .join("\n");
     return `<ul>${html}</ul>`;
   };
