@@ -1,6 +1,6 @@
 # skillboard
 
-A single page HTML file to discover skills in a small group: https://blog.oxrse.uk/skillboard/ 
+A single page HTML file to discover skills in a small group: https://blog.oxrse.uk/skillboard/
 
 ## Usage
 
@@ -9,5 +9,5 @@ A single page HTML file to discover skills in a small group: https://blog.oxrse.
 
 ## Adding Skills and People
 
-Skills and people are stored in the `skills.json` file.  
+Skills and people are stored in the `skills.json` file.
 To add a skill or person, edit the JSON file and submit a pull request.

@@ -168,7 +168,7 @@
     Object.values(data).forEach((ss) => {
       ss.map((s) => s.replaceAll("+", "")).forEach(out.add, out);
     });
-    return Array.from(out);
+    return Array.from(out).sort();
   };
 
   const clear = () => {
